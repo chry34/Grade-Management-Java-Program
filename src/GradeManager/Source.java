@@ -84,6 +84,8 @@ public class Source {
             	} else {
                     System.out.print("");
             	}
+
+				// kulang nalang yung pagkuha ng kabuoan hahah pls tapusin nas
             }
 	}
 }
