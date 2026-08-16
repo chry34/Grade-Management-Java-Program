@@ -8,7 +8,7 @@ public class Source {
 		Scanner input = new Scanner(System.in);
 		System.out.println("===== Grade Management System =====");
 		
-		// pangalan nila
+		// pangalan nila and total score
 		System.out.print("Enter the Number of Students: ");
 		int studentAmount = input.nextInt();
 		input.nextLine();
@@ -16,12 +16,12 @@ public class Source {
 		double totalScore = input.nextInt();
 		input.nextLine();
 
-		// arrays
+		// arrays o set of data
         String[] names = new String[studentAmount];
         double[] score = new double[studentAmount];
      
         
-        // name and grade whahaha
+        // name and grade
         for (int i = 0; i < studentAmount; i++) {
             System.out.print("Enter name of student #" + (i + 1) + ": ");
             names[i] = input.nextLine();
@@ -31,7 +31,7 @@ public class Source {
             input.nextLine();
             }
 
-        	// secret thing wag mona pansinin
+        	//legends lang nakakaalam
         	for (int z = 0; z < 129; z++) {
         	System.out.println(" ");
         	}
@@ -43,12 +43,21 @@ public class Source {
  				System.out.println("Name: " + names[x]);
  				System.out.println("Score: " + score[x]);
  				
- 				if (scorePercentage >= 75) {
+ 				if (scorePercentage >= 100) {
+ 					System.out.println("Status: PASSED with Highest Honor");
+ 					System.out.println(" ");
+ 				} else if (scorePercentage >= 95) {
+ 					System.out.println("Status: PASSED with High Honor");
+ 					System.out.println(" ");
+ 				} else if (scorePercentage >= 90) {
+ 					System.out.println("Status: PASSED with Honor");
+ 					System.out.println(" ");
+ 				} else if (scorePercentage >= 75) {
  					System.out.println("Status: PASSED");
  					System.out.println(" ");
  				} else {
- 					System.out.println("Status: FAILED");
- 					System.out.println(" ");
+ 	 				System.out.println("Status: FAILED");
+ 	 				System.out.println(" ");
  				}
  				
  			}
@@ -72,20 +81,31 @@ public class Source {
                 }
             }
             
-            // rank na at total average
+            // rank at total average of students
             System.out.println("===== Ranking =====");
-            
             for (int r = 0; r < studentAmount; r++) {
             	double scoreConvert = (score[r]/totalScore)*100;
+            	
+      
             	if (scoreConvert >= 75  ) {
                 System.out.println("Rank " + (r + 1) + ": " + names[r] + " - " + score[r] + "/" + totalScore);
-                System.out.println("Average: " + scoreConvert + "%");
+                System.out.println("Average Achieved: " + scoreConvert + "%");
                 System.out.println(" ");
             	} else {
-                    System.out.print("");
+                    System.out.print(""); 
             	}
+            }
+            
+         // mga kawawa
+            System.out.println("===== Aral Program List =====");
+            for (int r = 0; r < studentAmount; r++) {
+            	double scoreConvert = (score[r]/totalScore)*100;
 
-				// kulang nalang yung pagkuha ng kabuoan hahah pls tapusin nas
+            	if (scoreConvert <= 75  ) {
+                System.out.println("Name: " + names[r] + " - " + score[r] + "/" + totalScore);
+                System.out.println("Average Achieved: " + scoreConvert + "%");
+                System.out.println(" ");
+            	}
             }
 	}
 }
