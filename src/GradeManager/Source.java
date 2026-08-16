@@ -43,7 +43,7 @@ public class Source {
  				System.out.println("Name: " + names[x]);
  				System.out.println("Score: " + score[x]);
  				
- 				if (scorePercentage >= 100) {
+ 				if (scorePercentage >= 99) {
  					System.out.println("Status: PASSED with Highest Honor");
  					System.out.println(" ");
  				} else if (scorePercentage >= 95) {
