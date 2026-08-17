@@ -77,7 +77,7 @@ public class Source {
 	        }
 	        
 	        // rank na
-	        System.out.println("===== RANK =====\n");
+	        System.out.println("===== RANK =====");
 	        int rank = 1;
 	        int i = 0;
 	        while (i < studentAmount) {
