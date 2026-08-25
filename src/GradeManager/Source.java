@@ -94,16 +94,9 @@ public class Source1 {
 
 	                int j = i;
 	                while (j < studentAmount && score[j] == score[i]) {
-	                	
-	                	if (percent >= 99) {
-		                    System.out.println(names[j] + " - " + percent + "%" + " - With Highest Honor");
-	                	} else if (percent >= 95) {
-		                    System.out.println(names[j] + " - " + percent + "%" + " - With High Honor");
-	                	} else if (percent >= 90) {
-		                    System.out.println(names[j] + " - " + percent + "%" + " - With Honor");
-	                	} else {
+
 		                    System.out.println(names[j] + " - " + percent + "%");
-	                	}
+	                	
 
 	                    j++;
 	                }
@@ -121,15 +114,18 @@ public class Source1 {
 	        for (int r = 0; r < studentAmount; r++) {
 	           	double scoreConvert = (score[r]/totalScore)*100;
 
-            	if (scoreConvert <= 75) {
+            	if (scoreConvert < 75) {
                 System.out.println("Name: " + names[r]);
-                System.out.println("Average Achieved: " + scoreConvert + "%");
+                System.out.printf("Average Achieved: %.2f", scoreConvert);
                 System.out.println(" ");
 	            }
 	        }
 	        
 			double averageScore = sum / score.length;
 			double averagePercentage = (averageScore / totalScore) * 100;
+			
+            System.out.println(" ");
+            
 			System.out.printf("Overall Average Percentage: %.2f", averagePercentage);
 	        
 		}
