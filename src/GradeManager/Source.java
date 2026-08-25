@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Source1 {
 	 public static String getOrdinal(int num) {
 		 
-		 // declare ordinal para sa rank
 	        if (num >= 11 && num <= 13) return num + "th";
 	        switch (num % 10) {
 	            case 1: return num + "st";
