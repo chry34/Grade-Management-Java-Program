@@ -14,7 +14,7 @@ public class Source1 {
 	        }
 	    }
 	 	
-	 	// store num of students and declare score of exam
+	 	// store num of students and declare score of exam ng mga students bwhwhahwahwhawh
 	    public static void main(String[] args) {
 	        Scanner input = new Scanner(System.in);
 	        System.out.println("===== Grade Management System =====");
