@@ -13,8 +13,7 @@ public class Source1 {
 	            default: return num + "th";
 	        }
 	    }
-	 	
-	 	// store num of students and declare score of exam ng mga students bwhwhahwahwhawh
+	
 	    public static void main(String[] args) {
 	        Scanner input = new Scanner(System.in);
 	        System.out.println("===== Grade Management System =====");
@@ -47,10 +46,8 @@ public class Source1 {
 	            input.nextLine();
 	        }
 	        
-	        // legends lang nakakaalam
 	        for (int z = 0; z < 129; z++) System.out.println();
 	        
-	        // info and status of students
 	        System.out.println("====== Student Information =====");
 	        for (int x = 0; x < studentAmount; x++) {
             	double scorePercentage = (score[x]/totalScore)*100;
@@ -66,8 +63,7 @@ public class Source1 {
  				}
 	            System.out.println(" ");
 	        }
-	        
-	        // magulo to
+	    
 	        for (int t = 0; t < studentAmount - 1; t++) {
 	            for (int j = t + 1; j < studentAmount; j++) {
 	                if (score[t] < score[j]) {
@@ -82,7 +78,6 @@ public class Source1 {
 	            }
 	        }
 	        
-	        // rank na
 	        System.out.println("===== RANK =====");
 	        int rank = 1;
 	        int i = 0;
@@ -108,8 +103,7 @@ public class Source1 {
 	                i++;
 	            }
 	        }
-	        
-	        // mga kawawa
+	    
 	        System.out.println("===== Aral Program List =====");
 	        for (int r = 0; r < studentAmount; r++) {
 	           	double scoreConvert = (score[r]/totalScore)*100;
