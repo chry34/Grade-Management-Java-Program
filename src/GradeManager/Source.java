@@ -1,7 +1,7 @@
 package GradeManager;
 import java.util.Scanner;
 
-public class Source {
+public class Source1 {
 	 public static String getOrdinal(int num) {
 		 
 		 // declare ordinal para sa rank
@@ -22,18 +22,28 @@ public class Source {
 	        System.out.print("Enter the Number of Students: ");
 	        int studentAmount = input.nextInt();
 	        input.nextLine();
-	        System.out.print("Enter the Total Score of Exam: ");
+	        System.out.print("Enter the Highest Possible Score: ");
 	        double totalScore = input.nextDouble();
+	        
 	        input.nextLine();
 
 	        String[] names = new String[studentAmount];
 	        double[] score = new double[studentAmount];
+            double sum = 0;
+	        
+	        for (int m = 1; m < 69420; m++) {
+	        	System.out.println(" ");
+	        }
 	        
 	        for (int i = 0; i < studentAmount; i++) {
-	            System.out.print("Enter name of student #" + (i + 1) + ": ");
+	            System.out.println("===== Information of Student #" + (i + 1) + " =====");
+	            
+	            System.out.print("Enter NAME: ");
 	            names[i] = input.nextLine();
-	            System.out.print("Enter Score of Student #" + (i + 1) + ": ");
+	            System.out.print("Enter SCORE: ");
 	            score[i] = input.nextDouble();
+	            
+	            System.out.println(" ");
 	            input.nextLine();
 	        }
 	        
@@ -47,13 +57,9 @@ public class Source {
  				System.out.println("Name: " + names[x]);
  				System.out.println("Score: " + score[x] + "/" + totalScore);
  				
- 				if (scorePercentage >= 99) {
- 					System.out.println("Status: PASSED with Highest Honor");
- 				} else if (scorePercentage >= 95) {
- 					System.out.println("Status: PASSED with High Honor");
- 				} else if (scorePercentage >= 90) {
- 					System.out.println("Status: PASSED with Honor");
- 				} else if (scorePercentage >= 75) {
+    	        sum += score[x];
+ 				
+ 				if (scorePercentage >= 75) {
  					System.out.println("Status: PASSED");
  				} else {
  	 				System.out.println("Status: FAILED");
@@ -88,13 +94,23 @@ public class Source {
 
 	                int j = i;
 	                while (j < studentAmount && score[j] == score[i]) {
-	                    System.out.println(names[j] + " - " + percent + "%");
+	                	
+	                	if (percent >= 99) {
+		                    System.out.println(names[j] + " - " + percent + "%" + " - With Highest Honor");
+	                	} else if (percent >= 95) {
+		                    System.out.println(names[j] + " - " + percent + "%" + " - With High Honor");
+	                	} else if (percent >= 90) {
+		                    System.out.println(names[j] + " - " + percent + "%" + " - With Honor");
+	                	} else {
+		                    System.out.println(names[j] + " - " + percent + "%");
+	                	}
+
 	                    j++;
 	                }
 	                
 	                System.out.println();
 	                rank = rank + 1; 
-	                i = j; 
+	                i = j;
 	            } else {
 	                i++;
 	            }
@@ -102,16 +118,19 @@ public class Source {
 	        
 	        // mga kawawa
 	        System.out.println("===== Aral Program List =====");
-	        System.out.println(" ");
 	        for (int r = 0; r < studentAmount; r++) {
 	           	double scoreConvert = (score[r]/totalScore)*100;
 
             	if (scoreConvert <= 75) {
                 System.out.println("Name: " + names[r]);
-                System.out.println("Score Achieved: " + score[r] + "/" + totalScore);
                 System.out.println("Average Achieved: " + scoreConvert + "%");
                 System.out.println(" ");
 	            }
 	        }
+	        
+			double averageScore = sum / score.length;
+			double averagePercentage = (averageScore / totalScore) * 100;
+			System.out.printf("Overall Average Percentage: %.2f", averagePercentage);
+	        
 		}
 }
